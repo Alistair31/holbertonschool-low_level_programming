@@ -12,7 +12,7 @@ int main(void)
 	{
 		putchar(alphabetl);
 	}
-	for (alphabetu = 65; alphabetu < 90; alphabetu++)
+	for (alphabetu = 65; alphabetu < 91; alphabetu++)
 	{
 		putchar(alphabetu);
 	}
