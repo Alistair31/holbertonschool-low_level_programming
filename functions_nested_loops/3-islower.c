@@ -3,7 +3,7 @@
 /**
  * _islower - Entry point
  * @c: a character that will be checked
- * Return: Always 0 (Success)
+ * Return: 1 when c is a lowercase alphabetical character
  */
 
 int _islower(int c)

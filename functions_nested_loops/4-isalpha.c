@@ -3,7 +3,7 @@
 /**
  * _isalpha - Entry point
  * @c: a character that will be checked
- * Return: Always 0 (Success)
+ * Return: 1 when c is an alphabetical character
  */
 
 int _isalpha(int c)
