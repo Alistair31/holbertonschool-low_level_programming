@@ -1,8 +1,7 @@
 #include "main.h"
- /**
- * print_most_numbers - function used to print all digits (expect 2 and 4)
- * @nb: numbers to print
- * @it: number of times the function is used
+/**
+ * more_numbers - print all digits (expect 2 and 4)
+ * Return: void
  */
 void more_numbers(void)
 {
