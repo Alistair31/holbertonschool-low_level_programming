@@ -1,21 +1,24 @@
 #include "main.h"
- /**
+/**
  * print_square - function that print a square of hashtags
  * @size: size of the square
- * @ln: numbers of line of the square
- * @ht: numbers of column of the square
+ * Return: void
  */
 void print_square(int size)
 {
 	int ln;
-	int b;
+	int ht;
 
-	for (ln = 1; ln <= size; ln++)
+	if (size > 0)
 	{
-		for (b = 1; b <= size; b++)
+		for (ln = 1; ln <= size; ln++)
 		{
-			_putchar('#');
-		}
+			for (ht = 1; ht <= size; ht++)
+			{
+				_putchar('#');
+			}
 		_putchar('\n');
+		}
 	}
+
 }
