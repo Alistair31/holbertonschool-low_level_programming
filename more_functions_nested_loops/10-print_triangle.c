@@ -1,9 +1,7 @@
 #include "main.h"
- /**
- * print_square - function that print a triangle of hashtags
+/**
+ * print_triangle - print a triangle of hashtags
  * @size: size of the triangle
- * @ln: numbers of line
- * @ht: numbers of column
  */
 void print_triangle(int size)
 {
@@ -30,5 +28,4 @@ void print_triangle(int size)
 	{
 		_putchar('\n');
 	}
-	
 }
