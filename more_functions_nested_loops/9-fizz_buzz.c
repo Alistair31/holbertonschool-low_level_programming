@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include "_putchar.c"
  /**
  * fizz_buzz - print fizz or buzz instead of multiple of 3 and 5 respectfully
  * Return: 0
