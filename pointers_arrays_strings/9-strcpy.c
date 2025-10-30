@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include "_putchar.c"
 /**
  * _strcpy - copy the pointed string
  * @dest: destination of copy
