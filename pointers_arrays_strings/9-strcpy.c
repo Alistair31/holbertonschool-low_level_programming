@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "_putchar.c"
 /**
- * _strcpy - copy a pointed string
+ * _strcpy - copy the pointed string
  * @dest: destination of copy
  * @src: source string to copy
  * Return: void
