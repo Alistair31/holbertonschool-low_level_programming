@@ -21,7 +21,7 @@ int main(void)
 		}
 		else if (nb == 100)
 		{
-			printf("buzz");
+			printf("Buzz");
 		}
 		else if ((nb % 5 == 0) && (nb != 100))
 		{
