@@ -1,5 +1,4 @@
 #include "main.h"
-#include "_putchar.c"
 /**
  * _strlen_recursion - function that returns the length of a string
  * @s: string to print
