@@ -1,70 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
+
 /**
- * new_dog - create a new dog
+ * new_dog - creates a new dog
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
- * Return: NULL on failure
+ * Return: pointer to new dog, or NULL on failure
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
-	int i = 0;
-	int j = 0;
-	int ownlen = 0;
 	int namlen = 0;
-	char *scpyname;
-	char *scpyowner;
+	int ownlen = 0;
+	int i;
 
-	while (name[namlen] != '\0')
-	{
-		namlen++;
-		name++;
-	}
-	while (owner[ownlen] != '\0')
-	{
-		ownlen++;
-		owner++;
-	}
 	if (name == NULL || owner == NULL)
 		return (NULL);
-
+	while (name[namlen] != '\0')
+		namlen++;
+	while (owner[ownlen] != '\0')
+		ownlen++;
 	newdog = malloc(sizeof(dog_t));
 	if (newdog == NULL)
 		return (NULL);
-
-	scpyname = malloc(namlen + 1);
-	if (scpyname == NULL)
+	newdog->name = malloc(namlen + 1);
+	if (newdog->name == NULL)
 	{
 		free(newdog);
 		return (NULL);
 	}
-	
-	scpyowner = malloc(ownlen + 1);
-	if (scpyowner == NULL)
+	for (i = 0; i < namlen; i++)
+		newdog->name[i] = name[i];
+	newdog->name[i] = '\0';
+	newdog->owner = malloc(ownlen + 1);
+	if (newdog->owner == NULL)
 	{
-		free(scpyname);
+		free(newdog->name);
 		free(newdog);
 		return (NULL);
 	}
-
-	while (name[i] != '\0')
-	{
-		scpyname[i] = name[i];
-		i++;
-	}
-	scpyname[i] = '\0';
-
-	while (owner[j] != '\0')
-	{
-		scpyowner[j] = owner[j];
-		j++;
-	}
-	scpyowner[j] = '\0';
-	newdog->name = scpyname;
+	for (i = 0; i < ownlen; i++)
+		newdog->owner[i] = owner[i];
+	newdog->owner[i] = '\0';
 	newdog->age = age;
-	newdog->owner = scpyowner;
 	return (newdog);
 }
