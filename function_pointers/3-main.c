@@ -13,6 +13,7 @@ int main(int argc, char *argv[])
 	int nb1;
 	int nb2;
 	int (*op)(int, int);
+	char *endline = argv[2];
 
 	if (argc != 4)
 	{
@@ -23,7 +24,7 @@ int main(int argc, char *argv[])
 	nb2 = atoi(argv[3]);
 
 	op = get_op_func(argv[2]);
-	if (op == NULL)
+	if (op == NULL || endline[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
