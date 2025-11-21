@@ -3,9 +3,9 @@
 #include "main.h"
 /**
  * array_range - creates an array of integers
- * @min: 
- * @max:
- * Return: 
+ * @min: minimal value of the array
+ * @max: maximal value of the array
+ * Return: pointer to the newly created array
  */
 int *array_range(int min, int max)
 {
