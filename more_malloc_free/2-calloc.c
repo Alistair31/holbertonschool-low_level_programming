@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-#include "/home/alistair31/holbertonschool-low_level_programming/pointers_arrays_strings/0-memset.c"
 /**
  * _calloc - allocates memory for an array to zero
  * @nmemb: number of elements
@@ -10,7 +9,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *cal;
+	char *cal;
+	unsigned int i;
 
 	if (nmemb == 0)
 	{
@@ -25,6 +25,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	_memset(cal, 0, nmemb * size);
+	for (i = 0; i < (nmemb * size); i++)
+	{
+		cal[i] = 0;
+	}
 	return (cal);
 }
