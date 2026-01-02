@@ -3,7 +3,6 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <sys/stat.h>
-
 /**
  * main - copies the content of a file to another file
  * @argc: argument count
@@ -16,7 +15,7 @@ int main(int argc, char *argv[])
 	int fd_from, fd_to;
 	ssize_t r, w;
 	char buffer[1024];
-	
+
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
