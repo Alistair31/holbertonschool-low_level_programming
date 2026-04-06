@@ -4,7 +4,7 @@
  * main - check the code
  * @argc: number of argument
  * @argv: array of argument
- * Return: 0 (success)
+ * Return: 0 (success); 1 (Error)
  */
 int main(int argc, char **argv)
 {
